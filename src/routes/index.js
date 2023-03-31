@@ -3,7 +3,10 @@ const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 require('express-async-errors');
-const {NotFoundMiddlware, ErrorMiddlware} = require('../middlewares')
+const {NotFoundMiddlware, ErrorMiddlware} = require('../middlewares');
+const swaggerUI = require('swagger-ui-express');
+const {SWAGGER_PATH} = require('../config');
+const swaggerDocument = require(SWAGGER_PATH)
 
 
 module.exports = function({HomeRoutes, UserRoutes, IdeaRoutes, CommentRoutes, AuthRoutes}){
@@ -23,8 +26,9 @@ module.exports = function({HomeRoutes, UserRoutes, IdeaRoutes, CommentRoutes, Au
     apiRoutes.use("/auth", AuthRoutes);
 
 
-    router.use("/v1/api", apiRoutes);
 
+    router.use("/v1/api", apiRoutes);
+    router.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
     //Rutas para manejar errores
     router.use(NotFoundMiddlware);
