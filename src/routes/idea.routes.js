@@ -10,8 +10,8 @@ module.exports = function ({IdeaController}){
     router.post('', AuthMiddlware, IdeaController.create);
     router.patch('/:ideaId', AuthMiddlware, IdeaController.update);
     router.delete('/:ideaId', AuthMiddlware, IdeaController.delete);
-    router.post(':ideaId/upvote',AuthMiddlware, IdeaController.upvoteIdea);
-    router.post(':ideaId/downvote', AuthMiddlware, IdeaController.downvoteIdea);
+    router.post('/:ideaId/upvote',AuthMiddlware, IdeaController.upvoteIdea);
+    router.post('/:ideaId/downvote', AuthMiddlware, IdeaController.downvoteIdea);
 
     return router;
 }

@@ -39,7 +39,7 @@ class IdeaController {
 
     async getUserIdeas(req, res){
         const {userId} = req.params;
-        const ideas = await _ideaService.getUserIdea(userId);
+        const ideas = await _ideaService.getUserIdeas(userId);
         return res.send(ideas)
     }
 
