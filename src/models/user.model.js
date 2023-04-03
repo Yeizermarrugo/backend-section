@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
-const {compareSync, hashSync, genSaltSync} = require('bcrypt');
+const {compareSync, hashSync, genSaltSync} = require('bcryptjs');
 
 
 const UserSchema = new Schema({

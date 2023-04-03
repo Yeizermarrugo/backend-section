@@ -9,7 +9,7 @@ module.exports = function ({UserController}){
         [
         AuthMiddlware,
         ParseIntMiddleware,
-        CacheMiddleware(CACHE_TIME.ONE_HOUR)
+        // CacheMiddleware(CACHE_TIME.ONE_HOUR)
         ],
         UserController.getAll);
     router.get('/:userId', UserController.get);
