@@ -4,5 +4,4 @@ node_js:
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
-  api_key:
-    secure: $HEROKU_API_KEY
+  api_key: $HEROKU_API_KEY
