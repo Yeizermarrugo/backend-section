@@ -1,11 +1,8 @@
-sudo: false
 language: node_js
-os: windows
 node_js: 
- - node
-script:
-  - npm test
+ - 7
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
-  api_key: $HEROKU_API_KEY
+  api_key:
+    secure: 9c2420c8-a072-4a06-a382-cb90bca327fd
