@@ -1,7 +1,6 @@
 language: node_js
-os: windows
 node_js:
-  - "7"
+  - "18.15.0"
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
