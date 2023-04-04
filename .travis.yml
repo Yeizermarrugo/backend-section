@@ -1,6 +1,7 @@
 language: node_js
+os: windows
 node_js: 
- - 7
+ - stable
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
