@@ -1,6 +1,9 @@
 language: node_js
 node_js: 
  - 7
+script: 
+  -npm test
+  -npm start
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
