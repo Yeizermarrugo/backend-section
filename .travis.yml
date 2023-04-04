@@ -1,0 +1,7 @@
+language: node.js
+node_js:
+  - stable
+deploy:
+  provider: heroku
+  app: shareyouridea-nodejs-yeizer
+  api_key: $HEROKU_API_KEY

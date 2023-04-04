@@ -30,6 +30,7 @@
     "memory-cache": "^0.2.0",
     "mongoose": "^7.0.3",
     "mongoose-autopopulate": "^1.0.0",
+    "sudo": "^1.0.3",
     "swagger-ui-express": "^4.6.2"
   },
   "devDependencies": {
