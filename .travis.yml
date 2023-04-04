@@ -1,7 +1,10 @@
+sudo: false
 language: node_js
 os: windows
 node_js: 
- - 7
+ - node
+script:
+  - npm test
 deploy:
   provider: heroku
   app: shareyouridea-nodejs-yeizer
